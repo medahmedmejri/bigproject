@@ -10,7 +10,7 @@ const getfilms = async(req,res)=>{
         res.status(500)
     }
 }
-
+  
 const getonefilm= async(req,res)=>{
     try{
   const  onefilm= await films.findById(req.params.id).exec();
@@ -24,11 +24,14 @@ const getonefilm= async(req,res)=>{
 }
 
 const postfilm = async(req,res)=>{
-    const {title,rating,image}=req.body;
+    const {title,rating,image,directed_by,film_type,actors}=req.body;
     const newuser = await films({
         title,
         rating,
-        image
+        image,
+        directed_by,
+        film_type,
+        actors
     });
     try{
 const postfilm = await newuser.save();

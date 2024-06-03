@@ -3,7 +3,9 @@ const {Schema}=mongoose;
 const userschema= new Schema ({
     name:String,
     age:Number,
-    Email:String
+    Email:String,
+    adress:String,
+    image:String
 });
 
 

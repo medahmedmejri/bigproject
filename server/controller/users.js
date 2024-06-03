@@ -24,11 +24,13 @@ const getoneuser= async(req,res)=>{
 }
 
 const postuser = async(req,res)=>{
-    const {name,age,Email}=req.body;
+    const {name,age,Email,adress,image}=req.body;
     const newuser = await users({
         name,
         age,
-        Email
+        Email,
+        adress,
+        image
     });
     try{
 const postuser = await newuser.save();
