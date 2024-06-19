@@ -33,7 +33,7 @@ const postfilm = async(req,res)=>{
         film_type,
         actors
     });
-    try{
+    try{   
 const postfilm = await newuser.save();
 res.status(200).json({
     success: true ,postfilm})
